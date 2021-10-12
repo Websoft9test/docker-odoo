@@ -1,6 +1,7 @@
-## About
+## Odoo
 
-This repository is forked from ONLYOFFICE/Docker-CommunityServer, we have the following modifications are provided
+This repository fork Odoo official project.
 
-* replace README.md
-* add README-zh.md, CHANGELOG.md, Note.md, License.md, docker-compose.yml,.env, src, .github folder
+### 要点
+
+* Odoo 容器默认接收名称为 postgres 的数据库，不能定义为其他名称
