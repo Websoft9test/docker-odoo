@@ -1,4 +1,5 @@
-# image and docs: https://hub.docker.com/_/odoo
+# image: https://hub.docker.com/_/odoo
+# docs: https://github.com/odoo/docker
 
 version: '3.8'
 
