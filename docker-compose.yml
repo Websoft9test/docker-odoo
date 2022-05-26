@@ -17,11 +17,12 @@ services:
       HOST: db
       USER: ${DB_POSTGRES_USER}
       PASSWORD: ${DB_POSTGRES_PASSWORD}
+    command: bash -c "cat /my_cmd > cmd.sh && chmod +x /cmd.sh && /cmd.sh"
     depends_on:
       - db
     restart: always
-    stdin_open: true
-    tty: true
+    configs:
+      - source: my_cmd
 
   db:
     image: postgres:${DB_POSTGRES_VERSION}
@@ -48,3 +49,7 @@ volumes:
 networks:
   default:
       name: ${APP_NAME}
+
+configs:
+  my_cmd:
+    file: ./cmd.sh
